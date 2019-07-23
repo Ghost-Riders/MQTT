@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p>Successful.</p>
+<p>Something Went Wrong, Please Restart The Server : </p>
 </body>
 </html>
