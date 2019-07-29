@@ -37,6 +37,7 @@ public class Topic_list {
 				e.printStackTrace();
 			}
 		}
+		connection.close();
 		
 	}
 
