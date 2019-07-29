@@ -1,4 +1,4 @@
-package com.QuelistTrials;
+package com.Quelist_Topiclist_Trials;
 
 import java.util.*;
 
@@ -18,8 +18,6 @@ import org.apache.activemq.command.ActiveMQTopic;
 
 public class Quelist {
 	private static String url = ActiveMQConnection.DEFAULT_BROKER_URL;
-
-	private static String subject = "CDAC";
 
 	public static void main(String[] args) throws JMSException {
 		ActiveMQConnectionFactory connectionFatory=new ActiveMQConnectionFactory(url);
