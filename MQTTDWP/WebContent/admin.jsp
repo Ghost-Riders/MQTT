@@ -70,6 +70,5 @@
 				%>
 			</tbody>
 		</table>
-		
 </body>
 </html>
