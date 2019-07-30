@@ -11,6 +11,7 @@ import javax.jms.MessageProducer;
 import javax.jms.Session;
 import javax.jms.Topic;
 
+import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.broker.BrokerFactory;
 import org.apache.activemq.broker.BrokerService;
@@ -19,13 +20,14 @@ public class JmsTopicE {
 
 	public static void JmsTopicEM() throws URISyntaxException, Exception {
 		// TODO Auto-generated method stub
-		BrokerService broker=BrokerFactory.createBroker(new URI("broker:(tcp://localhost:61616)"));
+		String url = ActiveMQConnection.DEFAULT_BROKER_URL;
+		BrokerService broker=BrokerFactory.createBroker(new URI(url));
 		broker.start();
 		
 		Connection connection=null;
 		
 		try {
-			ConnectionFactory connectionFactory= new ActiveMQConnectionFactory("tcp://localhost:61616");
+			ConnectionFactory connectionFactory= new ActiveMQConnectionFactory(url);
 			
 			connection=connectionFactory.createConnection();
 			
