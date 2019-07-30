@@ -23,7 +23,7 @@ import com.JMSTopicEx.ConsumerMessageListener;
 
 public class JmsTopicConnectionE {
 
-	public static void main(String[] args) throws URISyntaxException, Exception {
+	public static void JmsTopicConnectionEM() throws URISyntaxException, Exception {
 	//	BrokerService broker=BrokerFactory.createBroker(new URI("broker:(tcp://localhost:61616)"));
 		//broker.setPersistent(true);
 		//broker.start();

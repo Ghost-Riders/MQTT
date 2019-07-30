@@ -18,7 +18,7 @@ public class MessageReceiver {
 	
 	private static String subject="JCG_QUEUE";
 	
-	public static void main(String[] args) {
+	public static void MessageReceiverM() {
 		ConnectionFactory connectionFactory=new ActiveMQConnectionFactory(url);
 		
 		try {

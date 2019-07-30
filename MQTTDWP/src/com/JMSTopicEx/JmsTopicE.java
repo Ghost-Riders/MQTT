@@ -17,7 +17,7 @@ import org.apache.activemq.broker.BrokerService;
 
 public class JmsTopicE {
 
-	public static void main(String[] args) throws URISyntaxException, Exception {
+	public static void JmsTopicEM() throws URISyntaxException, Exception {
 		// TODO Auto-generated method stub
 		BrokerService broker=BrokerFactory.createBroker(new URI("broker:(tcp://localhost:61616)"));
 		broker.start();

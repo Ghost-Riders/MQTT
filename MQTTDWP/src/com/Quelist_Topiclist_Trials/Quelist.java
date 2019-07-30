@@ -19,7 +19,7 @@ import org.apache.activemq.command.ActiveMQTopic;
 public class Quelist {
 	private static String url = ActiveMQConnection.DEFAULT_BROKER_URL;
 
-	public static void main(String[] args) throws JMSException {
+	public static void Qulist() throws JMSException {
 		ActiveMQConnectionFactory connectionFatory=new ActiveMQConnectionFactory(url);
 		
 		ActiveMQConnection connection=(ActiveMQConnection) connectionFatory.createConnection();

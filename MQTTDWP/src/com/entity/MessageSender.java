@@ -16,7 +16,7 @@ private static String url=ActiveMQConnection.DEFAULT_BROKER_URL;
 
 private static String subject="JCG_QUEUE";
 
-public static void main(String[] args) {
+public static void MessageSenderM() {
 	ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(url);
 	try {
 		Connection connection=connectionFactory.createConnection();
