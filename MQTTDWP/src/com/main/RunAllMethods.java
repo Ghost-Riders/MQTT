@@ -26,6 +26,12 @@ public class RunAllMethods {
 //		j.JmsTopicEM();
 
 		System.out.println("welcome");
+		JmsTopicConnectionE jt = new JmsTopicConnectionE();
+		jt.JmsTopicConnectionEM("welcome");
+		//demo();
+	}
+
+	public static  void demo() throws URISyntaxException, Exception {
 		String raw;
 		// JmsTopicE jm=new JmsTopicE();
 		JmsTopicConnectionE jt = new JmsTopicConnectionE();
@@ -39,8 +45,8 @@ public class RunAllMethods {
 					if (counter <= 1100) {
 						System.out.println("Topic Name: " + raw + " :" + counter);
 						// jm.JmsTopicEM(raw);
-						 jt.JmsTopicConnectionEM(raw);
-						 System.out.println(raw);
+						jt.JmsTopicConnectionEM(raw);
+						System.out.println(raw);
 
 					} else {
 						break;
