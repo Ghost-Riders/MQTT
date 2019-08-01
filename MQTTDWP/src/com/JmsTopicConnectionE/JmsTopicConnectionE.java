@@ -23,7 +23,7 @@ import com.JMSTopicEx.ConsumerMessageListener;
 
 public class JmsTopicConnectionE {
 
-	public static void JmsTopicConnectionEM() throws URISyntaxException, Exception {
+	public static void JmsTopicConnectionEM(String tt) throws URISyntaxException, Exception {
 	//	BrokerService broker=BrokerFactory.createBroker(new URI("broker:(tcp://localhost:61616)"));
 		//broker.setPersistent(true);
 		//broker.start();
@@ -34,11 +34,11 @@ public class JmsTopicConnectionE {
 			TopicConnectionFactory connectionFactory=new ActiveMQConnectionFactory(uri);
 			
 			topicConnection = connectionFactory.createTopicConnection();
-			topicConnection.setClientID("TOPIC");
+			topicConnection.setClientID(tt);
 			
 			TopicSession topicConsumerSession=topicConnection.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);
 			
-			Topic topic=topicConsumerSession.createTopic("customerTopic");
+			Topic topic=topicConsumerSession.createTopic(tt);
 			
 			//subscribe
 			
