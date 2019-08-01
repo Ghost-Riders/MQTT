@@ -18,10 +18,10 @@ import org.apache.activemq.broker.BrokerService;
 
 public class JmsTopicE {
 
-	public static void JmsTopicEM() throws URISyntaxException, Exception {
+	public static void JmsTopicEM(String tt) throws URISyntaxException, Exception {
 		// TODO Auto-generated method stub
 		String url = ActiveMQConnection.DEFAULT_BROKER_URL;
-		BrokerService broker=BrokerFactory.createBroker(new URI(url));
+		BrokerService broker=BrokerFactory.createBroker(new URI("broker:(tcp://localhost:61616)"));
 		broker.start();
 		
 		Connection connection=null;
@@ -33,7 +33,7 @@ public class JmsTopicE {
 			
 			Session session=connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 			
-			Topic topic= session.createTopic("customerTopic");
+			Topic topic= session.createTopic(tt);
 			
 			MessageConsumer consumer1=session.createConsumer(topic);
 			consumer1.setMessageListener(new ConsumerMessageListener("Consumer1"));
