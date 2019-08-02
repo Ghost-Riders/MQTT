@@ -38,9 +38,12 @@
 			<tbody>
 
 				<%
+					int i = 0;
 					while (lr.hasNext()) {
+						i++;
 				%>
 				<tr>
+					<td><%=i%></td>
 					<td><%=lr.next()%></td>
 				</tr>
 				<%
@@ -60,9 +63,12 @@
 			<tbody>
 
 				<%
+				int j=0;
 					while (lt.hasNext()) {
+						j++;
 				%>
 				<tr>
+					<td><%=j%></td>
 					<td><%=lt.next()%></td>
 				</tr>
 				<%
