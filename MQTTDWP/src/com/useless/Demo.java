@@ -16,10 +16,10 @@ public class Demo {
 					raw = Character.toString(i) + Character.toString(j) + Character.toString(k);
 					counter++;
 
-					if (counter >= 1 && counter <= 1000) {
+					if (counter >= 1 && counter <= 10) {
 						System.out.println("Topic Name: " + raw + " :" + counter);
 						// jm.JmsTopicEM(raw);
-						jt.JmsTopicConnectionEM(raw);
+						jt.JmsTopicConnectionEM("zAnir", raw);
 						System.out.println(raw);
 
 					}
