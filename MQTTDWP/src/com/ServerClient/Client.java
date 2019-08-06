@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.Socket;
 
+import com.useless.Demo;
+
 public class  Client
 {
 	public static void main(String args[]) throws Exception
@@ -14,16 +16,20 @@ public class  Client
 		PrintStream sout=new PrintStream(sk.getOutputStream());
 		BufferedReader stdin=new BufferedReader(new InputStreamReader(System.in));
 		String s;
-		while (  true )
-		{
-			System.out.print("Client : ");
-			s=stdin.readLine();
-			sout.println(s);
-			s=sin.readLine();
-			System.out.print("Server : "+s+"\n");
-  			if ( s.equalsIgnoreCase("BYE") )
- 			   break;
-		}
+//		while (  true )
+//		{
+//			System.out.print("Client : ");
+//			s=stdin.readLine();
+//			sout.println(s);
+//			s=sin.readLine();
+//			System.out.print("Server : "+s+"\n");
+//  			if ( s.equalsIgnoreCase("BYE") )
+// 			   break;
+//		}
+		System.out.println("Start ------------------------");
+		Demo d=new Demo();
+		d.demo();
+		System.out.println("End ------------------------");
 		 sk.close();
 		 sin.close();
 		 sout.close();
