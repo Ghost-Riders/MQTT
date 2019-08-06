@@ -36,9 +36,9 @@ public class JmsTopicConnectionE {
 			TopicConnectionFactory connectionFactory=new ActiveMQConnectionFactory(uri);
 			
 			topicConnection = connectionFactory.createTopicConnection();
-			int i=0;
-			topicConnection.setClientID(tt+i);
-			i++;
+			
+			topicConnection.setClientID(tt);
+			
 			TopicSession topicConsumerSession=topicConnection.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);
 			
 			Topic topic=topicConsumerSession.createTopic(tt);
