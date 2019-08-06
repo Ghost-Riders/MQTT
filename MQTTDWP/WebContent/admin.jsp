@@ -26,6 +26,9 @@
 		ListIterator lt = t.listIterator();
 	%>
 	<div class="container">
+		<h2>USERS</h2>
+	<!-- 	<p>Sender <a href="SenderOne.jsp">Click here</a></p>
+		<p>Receiver <a href="ReceiverOne.jsp">Click here</a></p> -->
 		<h2>Active MQ Details</h2>
 
 		<table class="table table-striped">
@@ -41,12 +44,14 @@
 					int i = 0;
 					while (lr.hasNext()) {
 						i++;
+						
 				%>
 				<tr>
 					<td><%=i%></td>
 					<td><%=lr.next()%></td>
 				</tr>
 				<%
+					
 					}
 				%>
 
@@ -63,9 +68,10 @@
 			<tbody>
 
 				<%
-				int j=0;
+					int j = 0;
 					while (lt.hasNext()) {
 						j++;
+						
 				%>
 				<tr>
 					<td><%=j%></td>
