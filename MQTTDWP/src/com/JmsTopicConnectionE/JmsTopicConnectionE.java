@@ -23,7 +23,7 @@ import com.JMSTopicEx.ConsumerMessageListener;
 
 public class JmsTopicConnectionE {
 
-	public static void JmsTopicConnectionEM(String tt) throws URISyntaxException, Exception {
+	public static void JmsTopicConnectionEM(String tt, String consu) throws URISyntaxException, Exception {
 	//	BrokerService broker=BrokerFactory.createBroker(new URI("broker:(tcp://localhost:61616)"));
 		//broker.setPersistent(true);
 		//broker.start();
@@ -45,16 +45,16 @@ public class JmsTopicConnectionE {
 			//subscribe
 			
 			MessageConsumer consumer1=topicConsumerSession.createSubscriber(topic);
-			consumer1.setMessageListener(new ConsumerMessageListener("Consumer1"));
+			consumer1.setMessageListener(new ConsumerMessageListener(consu));
 			
-			MessageConsumer consumer2=topicConsumerSession.createSubscriber(topic);
-			consumer2.setMessageListener(new ConsumerMessageListener("Consumer2"));
+//			MessageConsumer consumer2=topicConsumerSession.createSubscriber(topic);
+//			consumer2.setMessageListener(new ConsumerMessageListener("Consumer2"));
 			
 			topicConnection.start();
 			
 			
 			TopicSession topicPublisheSession= topicConnection.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);
-			String payload="Important Task";
+			String payload=consu+" welcoming";
 			Message msg=topicPublisheSession.createTextMessage(payload);
 			TopicPublisher publisher=topicPublisheSession.createPublisher(topic);
 			System.out.println("Sending tex : '" +payload +"'");
