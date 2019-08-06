@@ -8,6 +8,7 @@ import com.JMSTopicEx.JmsTopicE;
 import com.JmsTopicConnectionE.JmsTopicConnectionE;
 import com.Quelist_Topiclist_Trials.Quelist;
 import com.Quelist_Topiclist_Trials.Topic_list;
+import com.useless.Demo;
 
 public class RunAllMethods {
 
@@ -26,34 +27,12 @@ public class RunAllMethods {
 //		j.JmsTopicEM();
 
 		System.out.println("welcome");
-		// JmsTopicConnectionE jt = new JmsTopicConnectionE();
-		// jt.JmsTopicConnectionEM("welcome");
-		demo();
+//		 JmsTopicConnectionE jt = new JmsTopicConnectionE();
+//		 jt.JmsTopicConnectionEM("welcome", "welcome");
+		Demo d=new Demo();
+		d.demo();
 	}
 
-	public static void demo() throws URISyntaxException, Exception {
-		String raw;
-		// JmsTopicE jm=new JmsTopicE();
-		JmsTopicConnectionE jt = new JmsTopicConnectionE();
-		int counter = 0;
-		for (char i = 'a'; i <= 'z'; i++) {
-			for (char j = 'a'; j <= 'z'; j++) {
-				for (char k = 'a'; k <= 'z'; k++) {
-					raw = Character.toString(i) + Character.toString(j) + Character.toString(k);
-					counter++;
-
-					if (counter >= 1400 && counter <= 1600) {
-						System.out.println("Topic Name: " + raw + " :" + counter);
-						// jm.JmsTopicEM(raw);
-						jt.JmsTopicConnectionEM(raw);
-						System.out.println(raw);
-
-					}
-				}
-			}
-		}
-		System.out.println("count :" + counter);
-
-	}
+	
 
 }
