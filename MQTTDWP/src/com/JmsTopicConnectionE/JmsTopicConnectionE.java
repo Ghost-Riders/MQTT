@@ -27,9 +27,9 @@ public class JmsTopicConnectionE {
 	//	BrokerService broker=BrokerFactory.createBroker(new URI("broker:(tcp://localhost:61616)"));
 		//broker.setPersistent(true);
 		//broker.start();
-		//String uri=ActiveMQConnection.DEFAULT_BROKER_URL;
-		URI u=new URI("tcp://10.226.35.172:61616");
-		String uri=u.toString();
+		String uri=ActiveMQConnection.DEFAULT_BROKER_URL;
+		//URI u=new URI("tcp://10.226.35.172:61616");
+		//String uri=u.toString();
 		TopicConnection topicConnection=null;
 		
 		try {
