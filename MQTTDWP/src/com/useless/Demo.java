@@ -16,7 +16,7 @@ public class Demo {
 					raw = Character.toString(i) + Character.toString(j) + Character.toString(k);
 					counter++;
 
-					if (counter >= 1 && counter <= 10) {
+					if (counter >= 1 && counter <= 100) {
 						System.out.println("Topic Name: " + raw + " :" + counter);
 						// jm.JmsTopicEM(raw);
 						jt.JmsTopicConnectionEM("zAnir", raw);
