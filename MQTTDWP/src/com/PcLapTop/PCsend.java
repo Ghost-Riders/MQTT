@@ -1,5 +1,8 @@
 package com.PcLapTop;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
@@ -16,9 +19,11 @@ public class PCsend {
 
 	private static String subject="Device1";
 
-	public static String sends(String msg) {
+	public static String sends(String msg) throws URISyntaxException {
+		URI u=new URI("tcp://10.226.35.172:61616");
+				String uri=u.toString();
 		String text=null;
-		ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(url);
+		ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(uri);
 		try {
 			Connection connection=connectionFactory.createConnection();
 			connection.start();

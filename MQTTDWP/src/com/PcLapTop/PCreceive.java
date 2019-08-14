@@ -1,5 +1,8 @@
 package com.PcLapTop;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
@@ -14,12 +17,14 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 
 public class PCreceive {
 
-private static String url=ActiveMQConnection.DEFAULT_BROKER_URL;
+//private static String url=ActiveMQConnection.DEFAULT_BROKER_URL;
 	
 	private static String subject="Device1";
 	static String rec;
-	public static String receives() {
-		ConnectionFactory connectionFactory=new ActiveMQConnectionFactory(url);
+	public static String receives() throws URISyntaxException {
+		URI u=new URI("tcp://10.226.35.172:61616");
+				String uri=u.toString();
+		ConnectionFactory connectionFactory=new ActiveMQConnectionFactory(uri);
 		
 		try {
 			Connection connection=connectionFactory.createConnection();
