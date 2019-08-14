@@ -34,7 +34,7 @@ public class Lapsend {
 			
 			MessageProducer producer=session.createProducer(destination);
 			
-			TextMessage message=session.createTextMessage(msg);
+			TextMessage message=session.createTextMessage(id+":"+msg);
 			
 			producer.send(message);
 			
