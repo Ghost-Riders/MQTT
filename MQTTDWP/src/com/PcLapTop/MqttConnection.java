@@ -45,7 +45,6 @@ public class MqttConnection {
 		}
 	}
 	
-	
 	public void MqttcloseConnection() {
 		 try {
 			topicConnection.close();
