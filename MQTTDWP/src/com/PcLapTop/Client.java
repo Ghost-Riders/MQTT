@@ -10,7 +10,7 @@ import com.useless.Demo;
 
 public class Client {
 	public static void main(String args[]) throws Exception {
-		Socket sk = new Socket("10.226.35.172", 2000);
+		Socket sk = new Socket("Enter Ip Address", 2000);
 		Lapsend send = new Lapsend();
 		PCreceive receive = new PCreceive();
 		Scanner scanner = new Scanner(System.in);
